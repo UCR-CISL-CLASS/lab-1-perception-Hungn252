@@ -1,0 +1,117 @@
+Result (<Det3DDataSample(
+
+    META INFORMATION
+    pcd_rotation_angle: 0.0
+    lidar_path: '000008.bin'
+    pcd_scale_factor: 1.0
+    flip: False
+    box_type_3d: <class 'mmdet3d.structures.bbox_3d.lidar_box3d.LiDARInstance3DBoxes'>
+    pcd_vertical_flip: False
+    pcd_trans: array([0., 0., 0.])
+    pcd_rotation: tensor([[1., 0., 0.],
+                [-0., 1., 0.],
+                [0., 0., 1.]])
+    transformation_3d_flow: ['R', 'S', 'T']
+    axis_align_matrix: array([[1., 0., 0., 0.],
+               [0., 1., 0., 0.],
+               [0., 0., 1., 0.],
+               [0., 0., 0., 1.]])
+    box_mode_3d: <Box3DMode.LIDAR: 0>
+    pcd_horizontal_flip: False
+
+    DATA FIELDS
+    gt_instances: <InstanceData(
+        
+            META INFORMATION
+        
+            DATA FIELDS
+        ) at 0x7f965acca820>
+    pred_instances: <InstanceData(
+        
+            META INFORMATION
+        
+            DATA FIELDS
+        ) at 0x7f96690f4b80>
+    gt_instances_3d: <InstanceData(
+        
+            META INFORMATION
+        
+            DATA FIELDS
+        ) at 0x7f965acca970>
+    pred_instances_3d: <InstanceData(
+        
+            META INFORMATION
+        
+            DATA FIELDS
+            bboxes_3d: LiDARInstance3DBoxes(
+                    tensor([[ 14.7586,  -1.0539,  -1.5589,   3.7563,   1.6060,   1.5587,  -0.3132],
+                        [  6.4377,  -3.8679,  -1.7356,   3.1477,   1.4600,   1.4285,  -0.2998],
+                        [  8.1123,   1.2170,  -1.6340,   3.6662,   1.5731,   1.5917,   2.8162],
+                        [ 20.1698,  -8.4310,  -1.6690,   2.3816,   1.5176,   1.5694,  -0.3255],
+                        [ 33.4558,  -7.0359,  -1.3376,   4.2139,   1.7447,   1.6698,   2.8286],
+                        [ 55.6216, -20.3287,  -1.3770,   4.3705,   1.7359,   1.7067,   2.8503],
+                        [  3.6384,   2.7380,  -1.6891,   3.7203,   1.5820,   1.5178,  -0.2306],
+                        [ 25.0406, -10.1565,  -1.6326,   3.7391,   1.6085,   1.4840,  -0.3299],
+                        [ 28.7255,  -1.5524,  -1.2017,   3.6939,   1.5430,   1.5609,   1.2415],
+                        [ 40.8709,  -9.7489,  -1.3668,   3.8332,   1.6530,   1.5704,  -0.2881]],
+                       device='cuda:0'))
+            scores_3d: tensor([0.9750, 0.9682, 0.9457, 0.8904, 0.8890, 0.7711, 0.7554, 0.7058, 0.5796,
+                        0.4416], device='cuda:0')
+            labels_3d: tensor([0, 0, 0, 0, 0, 0, 0, 0, 0, 0], device='cuda:0')
+        ) at 0x7f9659b85610>
+    eval_ann_info: None
+    gt_pts_seg: <PointData(
+        
+            META INFORMATION
+        
+            DATA FIELDS
+        ) at 0x7f965accae20>
+) at 0x7f965accab20>, {'data_samples': <Det3DDataSample(
+
+    META INFORMATION
+    pcd_rotation_angle: 0.0
+    pcd_scale_factor: 1.0
+    lidar_path: '000008.bin'
+    pcd_vertical_flip: False
+    box_type_3d: <class 'mmdet3d.structures.bbox_3d.lidar_box3d.LiDARInstance3DBoxes'>
+    axis_align_matrix: array([[1., 0., 0., 0.],
+               [0., 1., 0., 0.],
+               [0., 0., 1., 0.],
+               [0., 0., 0., 1.]])
+    pcd_trans: array([0., 0., 0.])
+    pcd_rotation: tensor([[1., 0., 0.],
+                [-0., 1., 0.],
+                [0., 0., 1.]])
+    transformation_3d_flow: ['R', 'S', 'T']
+    flip: False
+    box_mode_3d: <Box3DMode.LIDAR: 0>
+    pcd_horizontal_flip: False
+
+    DATA FIELDS
+    gt_instances_3d: <InstanceData(
+        
+            META INFORMATION
+        
+            DATA FIELDS
+        ) at 0x7f965accaf70>
+    gt_instances: <InstanceData(
+        
+            META INFORMATION
+        
+            DATA FIELDS
+        ) at 0x7f965accac70>
+    eval_ann_info: None
+    gt_pts_seg: <PointData(
+        
+            META INFORMATION
+        
+            DATA FIELDS
+        ) at 0x7f9659bc29a0>
+) at 0x7f965accad60>, 'inputs': {'points': tensor([[ 2.1554e+01,  2.8000e-02,  9.3800e-01,  3.4000e-01],
+        [ 2.1240e+01,  9.4000e-02,  9.2700e-01,  2.4000e-01],
+        [ 2.1056e+01,  1.5900e-01,  9.2100e-01,  5.3000e-01],
+        ...,
+        [ 6.3150e+00, -3.1000e-02, -1.6490e+00,  2.9000e-01],
+        [ 6.3090e+00, -2.1000e-02, -1.6470e+00,  2.9000e-01],
+        [ 6.3110e+00, -1.0000e-03, -1.6480e+00,  3.2000e-01]])}})
+

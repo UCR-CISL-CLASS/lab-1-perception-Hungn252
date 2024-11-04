@@ -1,4 +1,13 @@
+import numpy as np
+import pdb
+import sys
+import os
+from mmdet3d.apis import init_model, inference_detector
+import open3d as o3d
+
+
 class Detector:
+
     def __init__(self):
         # Add your initialization logic here
         pass
@@ -27,10 +36,10 @@ class Detector:
         """
         sensors = [
             {'type': 'sensor.camera.rgb', 'x': 0.7, 'y': -0.4, 'z': 1.60, 'roll': 0.0, 'pitch': 0.0, 'yaw': 0.0,
-                      'width': 300, 'height': 200, 'fov': 100, 'id': 'Left'},
+                      'width': 1280, 'height': 720, 'fov': 100, 'id': 'Left'},
 
             {'type': 'sensor.camera.rgb', 'x': 0.7, 'y': 0.4, 'z': 1.60, 'roll': 0.0, 'pitch': 0.0, 'yaw': 0.0,
-                      'width': 300, 'height': 200, 'fov': 100, 'id': 'Right'},
+                      'width': 1280, 'height': 720, 'fov': 100, 'id': 'Right'},
 
             {'type': 'sensor.lidar.ray_cast', 'x': 0.7, 'y': 0.0, 'z': 1.60, 'yaw': 0.0, 'pitch': 0.0, 'roll': 0.0,
                       'range': 50, 
@@ -62,6 +71,17 @@ class Detector:
                 det_score : numpy.ndarray
                     The confidence score for each predicted bounding box, shape (N, 1) corresponding to the above bounding box.
         """
+        _,data = sensor_data['LIDAR']  # Example data; replace with your actual ndarray
+        
+        
+        
+        config_file = 'pointpillars_hv_secfpn_8xb6-160e_kitti-3d-car.py'
+        checkpoint_file = 'hv_pointpillars_secfpn_6x8_160e_kitti-3d-car_20220331_134606-d42d15ed.pth'
+        model = init_model(config_file, checkpoint_file)
+        result =inference_detector(model, 'demo/data/kitti/000008.bin')
+        
+        print("Result",result)
+        
         return {}
 
     
